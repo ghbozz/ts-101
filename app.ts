@@ -93,3 +93,10 @@ const addNumbersAndStrings = (
 console.log(addNumbersAndStrings(1, 2, 'as-number'));
 console.log(addNumbersAndStrings('a', 'b', 'as-string'));
 console.log(addNumbersAndStrings('5', '5', 'as-number'));
+
+// Functions as types
+
+const combineValues: (a: Combinable, b: Combinable, convertion: 'as-number' | 'as-string') => Combinable = addNumbersAndStrings;
+
+console.log(combineValues(1, 2, 'as-number'));
+console.log(combineValues(1, 2, 'as-string'));
