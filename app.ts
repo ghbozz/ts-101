@@ -43,3 +43,28 @@ const helloBtn = document.querySelector('#hello-btn') as HTMLButtonElement;
 helloBtn.addEventListener('click', (): void => {
   greet(nameSpan.innerText);
 })
+
+// Enum
+enum Role {
+  ADMIN = 'ADMIN',
+  READ_ONLY = 'READ_ONLY',
+  AUTHOR = 'AUTHOR'
+}
+
+interface Person {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: Role;
+}
+
+const person: Person = { 
+  name: 'John', 
+  age: 30,
+  hobbies: ['Sports', 'Cooking'], 
+  role: Role.ADMIN 
+};
+
+console.log(person);
+
+// Union
