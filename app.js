@@ -49,3 +49,20 @@ var person = {
 };
 console.log(person);
 // Union
+var addNumbersAndString = function (a, b, convertion) {
+    if (convertion === 'as-number') {
+        a = +a;
+        b = +b;
+    }
+    else {
+        a = a.toString();
+        b = b.toString();
+    }
+    if (typeof a === 'number' && typeof b === 'number') {
+        return a + b;
+    }
+    return a.toString() + b.toString();
+};
+console.log(addNumbersAndString(1, 2, 'as-number'));
+console.log(addNumbersAndString('a', 'b', 'as-string'));
+console.log(addNumbersAndString('5', '5', 'as-number'));

@@ -68,3 +68,26 @@ const person: Person = {
 console.log(person);
 
 // Union
+const addNumbersAndStrings = (
+  a: number | string, 
+  b: number | string,
+  convertion: 'as-number' | 'as-string'
+  ) => {
+  if (convertion === 'as-number') {
+    a = +a;
+    b = +b;
+  } else {
+    a = a.toString() 
+    b = b.toString();
+  }
+
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b;
+  }
+
+  return a.toString() + b.toString();
+}
+
+console.log(addNumbersAndStrings(1, 2, 'as-number'));
+console.log(addNumbersAndStrings('a', 'b', 'as-string'));
+console.log(addNumbersAndStrings('5', '5', 'as-number'));
