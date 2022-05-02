@@ -68,9 +68,11 @@ const person: Person = {
 console.log(person);
 
 // Union
+type Combinable = string | number;
+
 const addNumbersAndStrings = (
-  a: number | string, 
-  b: number | string,
+  a: Combinable, 
+  b: Combinable,
   convertion: 'as-number' | 'as-string'
   ) => {
   if (convertion === 'as-number') {

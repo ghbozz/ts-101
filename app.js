@@ -48,8 +48,7 @@ var person = {
     role: Role.ADMIN
 };
 console.log(person);
-// Union
-var addNumbersAndString = function (a, b, convertion) {
+var addNumbersAndStrings = function (a, b, convertion) {
     if (convertion === 'as-number') {
         a = +a;
         b = +b;
@@ -63,6 +62,6 @@ var addNumbersAndString = function (a, b, convertion) {
     }
     return a.toString() + b.toString();
 };
-console.log(addNumbersAndString(1, 2, 'as-number'));
-console.log(addNumbersAndString('a', 'b', 'as-string'));
-console.log(addNumbersAndString('5', '5', 'as-number'));
+console.log(addNumbersAndStrings(1, 2, 'as-number'));
+console.log(addNumbersAndStrings('a', 'b', 'as-string'));
+console.log(addNumbersAndStrings('5', '5', 'as-number'));
